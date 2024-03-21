@@ -1,0 +1,86 @@
+<table border="1" align="center" width="70%" cellpadding="10" cellspacing="0" width="50%">
+  <thead align="center">
+    <tr>
+      <th>No</th>
+      <th>Nama</th>
+      <th>Nilai</th>
+      <th>Keterangan</th>
+      <th>Predikat</th>
+    </tr>
+  </thead>
+  <tbody align="center">
+    <script>
+      let mahasiswaKeseluruhan = [
+        {
+          nama: "Arif Hidayat",
+          nilai: 85,
+        },
+        {
+          nama: "Ahmad Solahuddin",
+          nilai: 90,
+        },
+        {
+          nama: "Sofyan Alhafidz",
+          nilai: 75,
+        },
+        {
+          nama: "Arsyaf Siregar",
+          nilai: 65,
+        },
+        {
+          nama: "Hanna Salifa",
+          nilai: 35,
+        },
+        {
+          nama: "Sofia Nur Salamah",
+          nilai: 92,
+        },
+      ];
+
+      let nomor = 1;
+      let nilai = "";
+      let predikat = "";
+      for (mahasiswa of mahasiswaKeseluruhan) {
+        if (mahasiswa.nilai > 85 && mahasiswa.nilai <= 100) {
+          nilai = "A";
+        } else if (mahasiswa.nilai > 75 && mahasiswa.nilai <= 85) {
+          nilai = "B";
+        } else if (mahasiswa.nilai > 65 && mahasiswa.nilai <= 75) {
+          nilai = "C";
+        } else if (mahasiswa.nilai > 0 && mahasiswa.nilai <= 65) {
+          nilai = "D";
+        }
+
+        switch (nilai) {
+          case "A":
+            predikat = "Sempurna";
+            break;
+          case "B":
+            predikat = "Baik";
+            break;
+          case "C":
+            predikat = "Cukup";
+            break;
+          case "D":
+            predikat = "Kurang";
+            break;
+          case "E":
+            predikat = "BBuruk";
+            break;
+          default:
+            predikat = "";
+            break;
+        }
+
+        document.write("<tr>");
+        document.write("<td>" + nomor + "</td>");
+        document.write("<td>" + mahasiswa.nama + "</td>");
+        document.write("<td>" + mahasiswa.nilai + "</td>");
+        document.write("<td>" + predikat + "</td>");
+        document.write("<td>" + nilai + "</td>");
+        document.write("</tr>");
+        nomor++;
+      }
+    </script>
+  </tbody>
+</table>

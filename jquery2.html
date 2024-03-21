@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Jquery</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // deklarasi untuk selector tag
+        $("input").click(function () {
+          alert("Selamat Pagi Kawan!");
+        });
+        // deklarasi untuk class
+        $(".apel").css("background-color", "red");
+        $(".primary").css({
+          "background-color": "lightblue",
+          margin: "auto",
+          width: "5%",
+          "text-align": "center",
+          // Tambahkan properti CSS lainnya sesuai kebutuhan
+        });
+        $("#hijau").css({
+          "background-color": "green",
+          color: "white",
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="submit" value="menyapa" />
+    <p class="apel">ini adalah warna apel mwehehe</p>
+    <p class="primary">halo</p>
+    <h2 id="hijau">ayo hijaukan dunia!</h2>
+  </body>
+</html>

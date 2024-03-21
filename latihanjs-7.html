@@ -1,0 +1,40 @@
+<script>
+    //deklarasi array
+    var buah =["Pepaya","Mangga","Pisang"];
+    buah[2] = "Apel";
+
+    for(var i = 0;i<buah.length;i++){
+        document.write("<br>"+buah[i])
+    }
+
+    document.write("<br>")
+</script>
+
+<script>
+    //arr obj
+    let mahasiswa1 = {
+        "nama":"Arya",
+        "jurusan":"Teknik Informatika",
+        "nim":"0220110098"
+    }
+    let mahasiswa2 = {
+        "nama":"Johan",
+        "jurusan":"Teknik Elektro",
+        "nim":"0220110033"
+    }
+    let mahasiswa3 = {
+        "nama":"Krisna",
+        "jurusan":"Teknik Informatika",
+        "nim":"0220110011"
+    }
+
+    let mahasiswa = [mahasiswa1,mahasiswa2,mahasiswa3]
+
+    for(p of mahasiswa){
+        document.write("<br>Nama: "+p.nama);
+        document.write("<br>Jurusan: "+p.jurusan);
+        document.write("<br>nim: "+p.nim);
+        document.write("<br>")
+    }
+
+</script>
